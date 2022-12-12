@@ -10,12 +10,13 @@ import './app.css';
 
 const App = () => {
     const activeMenu = true;
-    
+
+
 
     return (
         <div>
             <BrowserRouter>
-                <div className='flex relative dark:bg-main-dark-bg'>App</div>
+                <div className='flex relative dark:bg-main-dark-bg'></div>
                 <div className='fixed right-4 bottom-4' style={{ zIndex: '1000' }} >
                     <TooltipComponent content="Settings" position="Top">
                         <button type="button"
@@ -30,6 +31,7 @@ const App = () => {
                             <FiSettings />
                         </button>
                     </TooltipComponent>
+                    
                     {activeMenu ? (
                         <div className='w-72 fixed sidebar
                         dark:bg-secondary-dark-bg
@@ -54,8 +56,8 @@ const App = () => {
                         <Routes>
                             {/* element is what you render, right now its a string 'ecommerce */}
                             {/* Dashboard */}
-                            <Route path='/' element={<eCommerce />} />
-                            <Route path='/ecommerce' element={<eCommerce />} />
+                            <Route path='/' element={<Ecommerce />} />
+                            <Route path='/ecommerce' element={<Ecommerce />} />
 
                             {/* Pages */}
                             <Route path='/orders' element={<Orders />} />
